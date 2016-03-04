@@ -6,7 +6,7 @@ var validTilePattern = draw.pattern(10, 10, function(add) {
     add.rect(5,5).move(5,5)
 });
 
-var kingFill = '';
+
 
 var colors = {
     red: "#C63D0F",
@@ -628,7 +628,7 @@ function showDroppableTiles_slate() {
     return ret;
 }
 
-//get valid destination tiles for a crowned token
+//show valid destination tiles for a crowned token
 function showDroppableTiles_king() {
 
     var target1 = tiles.getByPosition(this.tile.column - 1, this.tile.row - 1);
@@ -704,16 +704,6 @@ function resetTokens(token){
     }
 }
 
-
-//on selecting (clicking) a token
-/*
- function tokenClick(e){
- e.cancelBubble = true;
- if(this.clickable) {
- resetTokens(this);
- this.getDroppableTiles();
- }
- }*/
 
 //TODO: on selecting (clicking) a valid tile
 function tileClick(){
